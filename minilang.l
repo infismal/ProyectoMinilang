@@ -53,13 +53,22 @@ REAL    {DIG}+"."{DIG}+([eE][+-]?{DIG}+)?|{DIG}+[eE][+-]?{DIG}+
 
 entero|real|cadena|logico|si|sino|mientras|para|funcion|retornar|imprimir|leer|verdadero|falso {
                           token("PALABRA_RESERVADA"); }
-{ID}                    { token("IDENTIFICADOR"); }
+{ID}   {
+
+    if (yyleng > 31){
+        error("E5", "identificador de más de 31 caracteres", linea, col);
+    }else{
+        token("IDENTIFICADOR");
+    }
+}                 
+
 {REAL}                  { token("REAL"); }
 {DIG}+                  { token("ENTERO"); }
 ({REAL}|{DIG}+)[A-Za-z0-9_.]+ { error_numero(); }
 
 \"(\\[^\n]|[^"\\\n])*\" { token("CADENA"); }
 \"(\\[^\n]|[^"\\\n])*   { error("E2", "cadena sin cerrar", linea, col); }
+\"([^\"\n\\]|\\[ntr\"\\\\])*\\[^ntr\"\\\\].*\" {error("E6", "la secuencia de escape no es valida", linea, col);}
 
 "=="|"!="|"<="|">="|"<"|">"  { token("OP_RELACIONAL"); }
 "&&"|"||"|"!"           { token("OP_LOGICO"); }
