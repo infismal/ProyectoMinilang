@@ -1,34 +1,24 @@
-#ifndef TABLA_SIMBOLOS_H
-#define TABLA_SIMBOLOS_H
+#ifndef TABLA_H
+#define TABLA_H
 
 typedef struct Simbolo {
-    char *identificador;
-    int *lineas;
-    int cantidad_lineas;
-    int capacidad;
+    char *identificador;        
+    int *lineas;               
+    int cantidades_lineas;      
+    int capacidad;             
     struct Simbolo *siguiente;
 } Simbolo;
 
 typedef struct {
     Simbolo *inicio;
     Simbolo *fin;
+    int cantidad;            
 } TablaSimbolos;
 
-void inicializarTabla(TablaSimbolos *tabla);
-
-void insertarIdentificador(
-    TablaSimbolos *tabla,
-    const char *identificador,
-    int linea
-);
-
-Simbolo *buscarIdentificador(
-    TablaSimbolos *tabla,
-    const char *identificador
-);
-
-void imprimirTabla(TablaSimbolos *tabla);
-
-void liberarTabla(TablaSimbolos *tabla);
+void tabla_iniciar(void);
+void registrar_identificador(const char *identificador, int linea);
+Simbolo *buscar_identificador(const char *identificador);
+void imprimir_tabla(void);
+void liberar_tabla(void);
 
 #endif
