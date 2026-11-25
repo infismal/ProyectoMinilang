@@ -106,7 +106,7 @@ entero|real|cadena|logico|si|sino|mientras|para|funcion|retornar|imprimir|leer|v
     if (yyleng > 31) {
         error("E5", "identificador de más de 31 caracteres", linea, col);
     } else {
-        tabla_agregar(yytext, linea);
+        registrar_identificador(yytext, linea);
         return token("IDENTIFICADOR", T_IDENTIFICADOR);
     }
 }
@@ -156,12 +156,13 @@ int main(int argc, char *argv[]) {
     }
 
     putchar('\n');
-    tabla_imprimir();
+    imprimir_tabla();
     printf("\ntokens: %d      errores: %d\n", ntokens, nerrores);
 
     if (argc > 1) {
         fclose(yyin);
     }
 
+    liberar_tabla();
     return 0;
 }

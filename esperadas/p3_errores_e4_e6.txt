@@ -1,0 +1,41 @@
+2:1	PALABRA_RESERVADA	entero
+2:8	IDENTIFICADOR	a
+2:10	ASIGNACION	=
+2:12	ERROR [E4]	número mal formado '12abc'
+2:17	DELIMITADOR	;
+3:1	PALABRA_RESERVADA	real
+3:6	IDENTIFICADOR	b
+3:8	ASIGNACION	=
+3:10	ERROR [E4]	número mal formado '3.14.5'
+3:16	DELIMITADOR	;
+4:1	PALABRA_RESERVADA	entero
+4:8	ERROR [E5]	identificador de más de 31 caracteres
+4:52	ASIGNACION	=
+4:54	ENTERO	1
+4:55	DELIMITADOR	;
+5:1	PALABRA_RESERVADA	cadena
+5:8	IDENTIFICADOR	s
+5:10	ASIGNACION	=
+5:17	ERROR [E6]	secuencia de escape no válida
+5:27	DELIMITADOR	;
+6:1	PALABRA_RESERVADA	cadena
+6:8	IDENTIFICADOR	t
+6:10	ASIGNACION	=
+6:12	CADENA	"bien \n escape"
+6:28	DELIMITADOR	;
+7:1	PALABRA_RESERVADA	imprimir
+7:9	DELIMITADOR	(
+7:10	IDENTIFICADOR	a
+7:11	DELIMITADOR	,
+7:13	IDENTIFICADOR	t
+7:14	DELIMITADOR	)
+7:15	DELIMITADOR	;
+7:16	FIN	
+
+TABLA DE SIMBOLOS (4 identificadores)
+  1  a                    lineas: 2 7
+  2  b                    lineas: 3
+  3  s                    lineas: 5
+  4  t                    lineas: 6 7
+
+tokens: 28      errores: 4

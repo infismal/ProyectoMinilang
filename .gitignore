@@ -1,0 +1,7 @@
+lex.yy.c
+minilang
+minilang.exe
+*.o
+salidas/
+output/
+.vscode/

@@ -80,9 +80,9 @@ void registrar_identificador(const char *identificador, int linea) {
 void imprimir_tabla(void) {
     int n = 1;
 
-    printf("TABLA DE SÍMBOLOS (%d identificadores)\n", tabla.cantidad);
+    printf("TABLA DE SIMBOLOS (%d identificadores)\n", tabla.cantidad);
     for (Simbolo *s = tabla.inicio; s != NULL; s = s->siguiente, n++) {
-        printf("  %d  %-20s líneas:", n, s->identificador);
+        printf("  %d  %-20s lineas:", n, s->identificador);
         for (int i = 0; i < s->cantidades_lineas; i++) {
             printf(" %d", s->lineas[i]);
         }

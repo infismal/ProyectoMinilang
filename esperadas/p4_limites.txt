@@ -1,0 +1,24 @@
+1:1	ERROR [E5]	identificador de más de 31 caracteres
+1:37	ASIGNACION	=
+1:39	REAL	1E3
+1:42	DELIMITADOR	;
+2:1	PALABRA_RESERVADA	imprimir
+2:9	DELIMITADOR	(
+2:10	CADENA	"A\nB\t\"C\"\\ // /*"
+2:31	DELIMITADOR	)
+2:32	DELIMITADOR	;
+3:1	PALABRA_RESERVADA	real
+3:6	IDENTIFICADOR	x
+3:8	ASIGNACION	=
+3:10	REAL	2.5e-3
+3:16	DELIMITADOR	;
+4:1	IDENTIFICADOR	x
+4:2	ASIGNACION	=
+4:3	ERROR [E4]	número mal formado '7e'
+4:5	DELIMITADOR	;
+5:1	FIN	
+
+TABLA DE SIMBOLOS (1 identificadores)
+  1  x                    lineas: 3 4
+
+tokens: 16      errores: 2

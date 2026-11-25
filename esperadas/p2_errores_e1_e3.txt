@@ -1,0 +1,31 @@
+2:1	PALABRA_RESERVADA	entero
+2:8	IDENTIFICADOR	x
+2:10	ASIGNACION	=
+2:12	ENTERO	5
+2:14	ERROR [E1]	carácter no válido '@'
+2:16	ENTERO	3
+2:17	DELIMITADOR	;
+3:1	PALABRA_RESERVADA	cadena
+3:8	IDENTIFICADOR	s
+3:10	ASIGNACION	=
+3:12	ERROR [E2]	cadena sin cerrar
+4:1	PALABRA_RESERVADA	entero
+4:8	IDENTIFICADOR	y
+4:10	ASIGNACION	=
+4:12	ERROR [E1]	carácter no válido '#'
+4:14	ENTERO	2
+4:15	DELIMITADOR	;
+5:1	PALABRA_RESERVADA	imprimir
+5:9	DELIMITADOR	(
+5:10	IDENTIFICADOR	x
+5:11	DELIMITADOR	)
+5:12	DELIMITADOR	;
+6:1	ERROR [E3]	comentario sin cerrar
+7:14	FIN	
+
+TABLA DE SIMBOLOS (3 identificadores)
+  1  x                    lineas: 2 5
+  2  s                    lineas: 3
+  3  y                    lineas: 4
+
+tokens: 19      errores: 4
