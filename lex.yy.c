@@ -1996,8 +1996,7 @@ int main(int argc, char *argv[]) {
 
     putchar('\n');
     imprimir_tabla();
-    printf("\ntokens: %d      errores: %d\n", ntokens, nerrores);
-
+    printf("\ntokens: %d  errores: %d\n", ntokens, nerrores);
     if (argc > 1) {
         fclose(yyin);
     }
