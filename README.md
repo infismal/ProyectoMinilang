@@ -5,10 +5,10 @@
 
 | Integrante | Responsabilidad principal |
 |---|---|
-| Guala Toapaxi Jorge Israel | Tabla de símbolos, prueba 1 e informe (§§ 4 y 6) |
-| Ismael | Errores E1–E6, prueba 3 e informe (§§ 3 y 3.1) |
-| Martín | Integración, prueba 2, informe (§§ 1, 5, 7 y 8) y entrega |
-| Nicolás | Tokens y posiciones, prueba 4 e informe (§§ 2 y 2.1) |
+| Guala Jorge | Tabla de símbolos, prueba 1 e informe (4 y 6) |
+| Heredia Ismael | Errores E1–E6, prueba 3 e informe (3 y 3.1) |
+| Roca Martín | Integración, prueba 2, informe (1, 5, 7 y 8) |
+| Bohorquez Nicolás | Tokens y posiciones, prueba 4 e informe (2 y 2.1) |
 
 ## Cómo compilar y probar
 
