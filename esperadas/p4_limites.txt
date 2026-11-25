@@ -1,0 +1,25 @@
+1:1	IDENTIFICADOR	real_abcdefghijklmnopqrstuvwxyz
+1:33	ASIGNACION	=
+1:35	REAL	1E3
+1:38	DELIMITADOR	;
+2:1	PALABRA_RESERVADA	imprimir
+2:9	DELIMITADOR	(
+2:10	CADENA	"A\nB\t\"C\"\\ // /*"
+2:31	DELIMITADOR	)
+2:32	DELIMITADOR	;
+3:1	PALABRA_RESERVADA	real
+3:6	IDENTIFICADOR	x
+3:8	ASIGNACION	=
+3:10	REAL	2.5e-3
+3:16	DELIMITADOR	;
+4:1	IDENTIFICADOR	x
+4:3	ASIGNACION	=
+4:5	ERROR [E4]	número mal formado '7e'
+4:7	DELIMITADOR	;
+5:1	FIN	
+
+TABLA DE SÍMBOLOS (2 identificadores)
+  1  real_abcdefghijklmnopqrstuvwxyz líneas: 1
+  2  x                    líneas: 3 4
+
+tokens: 17  errores: 1
