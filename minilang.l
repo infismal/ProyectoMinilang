@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include "tabla.h"
 #include "tokens.h"
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 int linea = 1, col = 1;
 int ntokens = 0, nerrores = 0;
@@ -106,7 +109,7 @@ entero|real|cadena|logico|si|sino|mientras|para|funcion|retornar|imprimir|leer|v
     if (yyleng > 31) {
         error("E5", "identificador de más de 31 caracteres", linea, col);
     } else {
-        tabla_agregar(yytext, linea);
+        registrar_identificador(yytext, linea);
         return token("IDENTIFICADOR", T_IDENTIFICADOR);
     }
 }
@@ -143,6 +146,9 @@ entero|real|cadena|logico|si|sino|mientras|para|funcion|retornar|imprimir|leer|v
 %%
 
 int main(int argc, char *argv[]) {
+    #ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    #endif
     if (argc > 1) {
         yyin = fopen(argv[1], "r");
         if (yyin == NULL) {
@@ -156,7 +162,7 @@ int main(int argc, char *argv[]) {
     }
 
     putchar('\n');
-    tabla_imprimir();
+    imprimir_tabla();
     printf("\ntokens: %d      errores: %d\n", ntokens, nerrores);
 
     if (argc > 1) {
